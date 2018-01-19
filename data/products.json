@@ -1,0 +1,157 @@
+{
+  "name" : "products",
+  "description" : "our tech products store",
+  "products" : [
+    {
+      "name" : "iPhone 7 128GB",
+      "brand" : "apple",
+      "category" : "phones & tablets",
+      "subprice"  : 44.99
+    },
+    {
+      "name" : "iPhone 7 32GB",
+      "brand" : "apple",
+      "category" : "phones & tablets",
+      "subprice"  : 39.99
+    },
+    {
+      "name" : "iPhone 7 Plus 128GB",
+      "brand" : "apple",
+      "category" : "phones & tablets",
+      "subprice"  : 44.99
+    },
+    {
+      "name" : "Galaxy S8 64GB",
+      "brand" : "samsung",
+      "category" : "phones & tablets",
+      "subprice"  : 44.99
+    },
+    {
+      "name" : "Galaxy S8+ 64GB",
+      "brand" : "samsung",
+      "category" : "phones & tablets",
+      "subprice"  : 49.99
+    },
+    {
+      "name" : "Drone BEBOP",
+      "brand" : "parrot",
+      "category" : "drones",
+      "subprice"  : 49.99
+    },
+    {
+      "name" : "Drone BEBOP 2",
+      "brand" : "parrot",
+      "category" : "drones",
+      "subprice"  : 59.99
+    },
+    {
+      "name" : "Vive",
+      "brand" : "htc",
+      "category" : "Gaming & VR",
+      "subprice"  : 59.99
+    },
+    {
+      "name" : "Virtual Reality Glasses Rift VR",
+      "brand" : "oculus",
+      "category" : "Gaming & VR",
+      "subprice"  : 59.99
+    },
+    {
+      "name" : "MacBook 12, M-5Y31, 8GB RAM, 516GB",
+      "brand" : "apple",
+      "category" : "computing",
+      "subprice"  : 59.99
+    },
+    {
+      "name" : "MacBook Air 11, i7 2.2, 8GB RAM, 512GB",
+      "brand" : "apple",
+      "category" : "computing",
+      "subprice"  : 64.99
+    },
+    {
+      "name" : "MacBook Air 13, i5-5250U, 4GB RAM, 128GB",
+      "brand" : "apple",
+      "category" : "computing",
+      "subprice"  : 69.99
+    },
+    {
+      "name" : "MacBook Pro 13, i5-3210M, 4GB RAM, 500GB",
+      "brand" : "apple",
+      "category" : "computing",
+      "subprice"  : 74.99
+    },
+    {
+      "name" : "Convertible Laptop Surface Book 512GB SSD Intel Core i7 16GB RAM dGPU",
+      "brand" : "microsoft",
+      "category" : "computing",
+      "subprice"  : 59.99
+    },
+    {
+      "name" : "Convertible Laptop YOGA 300-11IBR 80M1004KGE",
+      "brand" : "lenovo",
+      "category" : "computing",
+      "subprice"  : 59.99
+    },
+    {
+      "name" : "Watch 38mm",
+      "brand" : "apple",
+      "category" : "wearables",
+      "subprice"  : 39.99
+    },
+    {
+      "name" : "Watch 42mm",
+      "brand" : "apple",
+      "category" : "wearables",
+      "subprice"  : 44.99
+    },
+    {
+      "name" : "Watch Ambit 3",
+      "brand" : "suunto",
+      "category" : "wearables",
+      "subprice"  : 39.99
+    },
+    {
+      "name" : "Watch V800",
+      "brand" : "polar",
+      "category" : "wearables",
+      "subprice"  : 39.99
+    },
+    {
+      "name" : "Watch WI503Q-1LDBR0001",
+      "brand" : "asus",
+      "category" : "wearables",
+      "subprice"  : 44.99
+    },
+    {
+      "name" : "Alexa Dot",
+      "brand" : "amazon",
+      "category" : "smart home",
+      "subprice"  : 44.99
+    },
+    {
+      "name" : "Alexa Echo",
+      "brand" : "amazon",
+      "category" : "smart home",
+      "subprice"  : 49.99
+    },
+    {
+      "name" : "Qbo Milk Master",
+      "brand" : "tchibo",
+      "category" : "smart home",
+      "subprice"  : 29.99
+    },
+    {
+      "name" : "Robotic Vacuum Cleaner POWERbot VR20J9020UR/EG",
+      "brand" : "samsung",
+      "category" : "smart home",
+      "subprice"  : 39.99
+    },
+    {
+      "name" : "Robotic Vacuum Cleaner POWERbot VR20J9259U/EG",
+      "brand" : "samsung",
+      "category" : "smart home",
+      "subprice"  : 39.99
+    }
+  ]
+
+}
