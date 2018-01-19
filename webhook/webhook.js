@@ -5,6 +5,14 @@ var router = express.Router();
 //var state = require('./conversationState');
 var webhookMethods = require('./webhookMethods');
 
+router.get('/test',function (req,res) {
+   res.json({success : true , method : "GET method" , message : "success"});
+});
+
+router.post('/test',function (req,res) {
+    res.json({success : true , method : "POST method" , message : "success"});
+});
+
 
 router.post('/',function(req,res){
 
