@@ -42,7 +42,7 @@ module.exports.defineCategoryMethod = function (req) {
     let category = req.body.result.parameters.Category.toString().toLowerCase();
 
     //state.currentState = "category";
-    //state.currentCategory = category;
+    state.currentCategory = category;
 
     let brands = helpers.getBrandsOfCategory(category);
 
@@ -72,7 +72,7 @@ module.exports.defineBrandMethod = function (req) {
     let brand = req.body.result.parameters.Brand.toString().toLowerCase();
 
     //state.currentState = "brand";
-    //state.currentBrand = brand;
+    state.currentBrand = brand;
 
 
     let prods = helpers.getProductsOfCategoryAndBrand(state.currentCategory,brand);
@@ -124,7 +124,7 @@ module.exports.defineProducts = function (req) {
     let productName = req.body.result.parameters.productName;
     let prods = helpers.getMatchedProducts(productName);
 
-    state.currentState = "product";
+    //state.currentState = "product";
     state.currentProduct = productName;
 
     var resultProds = prods.filter(
@@ -159,7 +159,7 @@ module.exports.defineMoreAboutMethod = function (req) {
     let info = req.body.result.parameters.specificationNumber.toString();
 
     //state.currentState = "product";
-    //state.currentMoreInfos = info ;
+    state.currentMoreInfos = info ;
 
     if(specGB && !specRAM)
         info += "GB";
