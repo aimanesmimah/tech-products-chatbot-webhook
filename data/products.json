@@ -47,13 +47,13 @@
     {
       "name" : "Vive",
       "brand" : "htc",
-      "category" : "Gaming & VR",
+      "category" : "gaming & vr",
       "subprice"  : 59.99
     },
     {
       "name" : "Virtual Reality Glasses Rift VR",
       "brand" : "oculus",
-      "category" : "Gaming & VR",
+      "category" : "gaming & vr",
       "subprice"  : 59.99
     },
     {

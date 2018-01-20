@@ -18,13 +18,15 @@ module.exports.readyToStartConfirmation = function (req) {
                 speech += " First we have : " + categories[i] + ". Then, There is : ";
             }
             else if(i === categories.length - 1){
-                speech += " Finally we have : " + categories[i] + "."
+                speech += " Finally we have : " + categories[i] + ". "
             }
             else{
                 speech += categories[i] + ", " ;
             }
 
         }
+
+        speech += "May you define the category of your product ?"
 
     }
     else if (response === "no") {
@@ -114,7 +116,7 @@ module.exports.productionConfirmationMethod = function (req) {
         speech = "really do you want to look at other options ?" ;
     }
     else{
-        speech = "sorry! something bad happened" ;
+        speech = "sorry! something bad happened. Try again!" ;
     }
 
     return speech;
@@ -137,7 +139,7 @@ module.exports.defineProducts = function (req) {
         if(resultProds.length === 1)
             speech = "this is your dream product. The subscription plan for this " +
                 "product is : " + resultProds[0].subprice + "\nAre you happy " +
-                "with this deal";
+                "with this deal ?";
         else{
             speech = "this corresponds to " + resultProds.length + " products. " +
                 "Which one you want. Say more about it" ;
