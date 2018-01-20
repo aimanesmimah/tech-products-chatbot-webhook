@@ -6,7 +6,7 @@ var router = express.Router();
 var webhookMethods = require('./webhookMethods');
 
 router.get('/test',function (req,res) {
-   res.json({success : true , method : "GET method" , message : "success"});
+   res.json({success : true , method : "GET method 2" , message : "success"});
 });
 
 router.post('/test',function (req,res) {
