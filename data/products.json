@@ -3,151 +3,151 @@
   "description" : "our tech products store",
   "products" : [
     {
-      "name" : "iPhone 7 128GB",
+      "name" : "iphone 7 128gb",
       "brand" : "apple",
       "category" : "phones & tablets",
       "subprice"  : 44.99
     },
     {
-      "name" : "iPhone 7 32GB",
+      "name" : "iphone 7 32gb",
       "brand" : "apple",
       "category" : "phones & tablets",
       "subprice"  : 39.99
     },
     {
-      "name" : "iPhone 7 Plus 128GB",
+      "name" : "iphone 7 plus 128gb",
       "brand" : "apple",
       "category" : "phones & tablets",
       "subprice"  : 44.99
     },
     {
-      "name" : "Galaxy S8 64GB",
+      "name" : "galaxy s8 64gb",
       "brand" : "samsung",
       "category" : "phones & tablets",
       "subprice"  : 44.99
     },
     {
-      "name" : "Galaxy S8+ 64GB",
+      "name" : "galaxy s8+ 64gb",
       "brand" : "samsung",
       "category" : "phones & tablets",
       "subprice"  : 49.99
     },
     {
-      "name" : "Drone BEBOP",
+      "name" : "drone bebop",
       "brand" : "parrot",
       "category" : "drones",
       "subprice"  : 49.99
     },
     {
-      "name" : "Drone BEBOP 2",
+      "name" : "drone bebop 2",
       "brand" : "parrot",
       "category" : "drones",
       "subprice"  : 59.99
     },
     {
-      "name" : "Vive",
+      "name" : "vive",
       "brand" : "htc",
       "category" : "gaming & vr",
       "subprice"  : 59.99
     },
     {
-      "name" : "Virtual Reality Glasses Rift VR",
+      "name" : "virtual reality glasses rift vr",
       "brand" : "oculus",
       "category" : "gaming & vr",
       "subprice"  : 59.99
     },
     {
-      "name" : "MacBook 12, M-5Y31, 8GB RAM, 516GB",
+      "name" : "macbook 12, m-5y31, 8gb ram, 516gb",
       "brand" : "apple",
       "category" : "computing",
       "subprice"  : 59.99
     },
     {
-      "name" : "MacBook Air 11, i7 2.2, 8GB RAM, 512GB",
+      "name" : "macbook air 11, i7 2.2, 8gb ram, 512gb",
       "brand" : "apple",
       "category" : "computing",
       "subprice"  : 64.99
     },
     {
-      "name" : "MacBook Air 13, i5-5250U, 4GB RAM, 128GB",
+      "name" : "macbook air 13, i5-5250u, 4gb ram, 128gb",
       "brand" : "apple",
       "category" : "computing",
       "subprice"  : 69.99
     },
     {
-      "name" : "MacBook Pro 13, i5-3210M, 4GB RAM, 500GB",
+      "name" : "macbook pro 13, i5-3210m, 4gb ram, 500gb",
       "brand" : "apple",
       "category" : "computing",
       "subprice"  : 74.99
     },
     {
-      "name" : "Convertible Laptop Surface Book 512GB SSD Intel Core i7 16GB RAM dGPU",
+      "name" : "convertible laptop surface book 512gb ssd intel core i7 16gb ram dgpu",
       "brand" : "microsoft",
       "category" : "computing",
       "subprice"  : 59.99
     },
     {
-      "name" : "Convertible Laptop YOGA 300-11IBR 80M1004KGE",
+      "name" : "convertible laptop yoga 300-11ibr 80m1004kge",
       "brand" : "lenovo",
       "category" : "computing",
       "subprice"  : 59.99
     },
     {
-      "name" : "Watch 38mm",
+      "name" : "watch 38mm",
       "brand" : "apple",
       "category" : "wearables",
       "subprice"  : 39.99
     },
     {
-      "name" : "Watch 42mm",
+      "name" : "watch 42mm",
       "brand" : "apple",
       "category" : "wearables",
       "subprice"  : 44.99
     },
     {
-      "name" : "Watch Ambit 3",
+      "name" : "watch ambit 3",
       "brand" : "suunto",
       "category" : "wearables",
       "subprice"  : 39.99
     },
     {
-      "name" : "Watch V800",
+      "name" : "watch v800",
       "brand" : "polar",
       "category" : "wearables",
       "subprice"  : 39.99
     },
     {
-      "name" : "Watch WI503Q-1LDBR0001",
+      "name" : "watch wi503q-1ldbr0001",
       "brand" : "asus",
       "category" : "wearables",
       "subprice"  : 44.99
     },
     {
-      "name" : "Alexa Dot",
+      "name" : "alexa dot",
       "brand" : "amazon",
       "category" : "smart home",
       "subprice"  : 44.99
     },
     {
-      "name" : "Alexa Echo",
+      "name" : "alexa echo",
       "brand" : "amazon",
       "category" : "smart home",
       "subprice"  : 49.99
     },
     {
-      "name" : "Qbo Milk Master",
+      "name" : "qbo milk master",
       "brand" : "tchibo",
       "category" : "smart home",
       "subprice"  : 29.99
     },
     {
-      "name" : "Robotic Vacuum Cleaner POWERbot VR20J9020UR/EG",
+      "name" : "robotic vacuum cleaner powerbot vr20j9020ur/eg",
       "brand" : "samsung",
       "category" : "smart home",
       "subprice"  : 39.99
     },
     {
-      "name" : "Robotic Vacuum Cleaner POWERbot VR20J9259U/EG",
+      "name" : "robotic vacuum cleaner powerbot vr20j9259u/eg",
       "brand" : "samsung",
       "category" : "smart home",
       "subprice"  : 39.99

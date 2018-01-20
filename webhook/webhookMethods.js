@@ -164,9 +164,9 @@ module.exports.defineMoreAboutMethod = function (req) {
     state.currentMoreInfos = info ;
 
     if(specGB && !specRAM)
-        info += "GB";
+        info += "gb";
     if(specRAM || ( specGB && specRAM ))
-        info += "GB RAM";
+        info += "gb ram";
     else
         info += "";
 
