@@ -110,7 +110,14 @@ module.exports.productionConfirmationMethod = function (req) {
     let speech;
 
     if(option === "yes"){
-        speech = "So which one do you want to subscribe to ?";
+        let prods = helpers.getProductsOfCategoryAndBrand(state.currentCategory,state.currentProduct);
+        if(prods.length === 1) {
+            speech = "can you repeat its name please? Just to make sure it is really there.";
+        }
+        else{
+            speech = "So which one do you want to subscribe to ?";
+        }
+
     }
     else if(option === "no"){
         speech = "really do you want to look at other options ?" ;
