@@ -33,7 +33,7 @@ module.exports.readyToStartConfirmation = function (req) {
         speech = "ok! we can do it for another time. Good bye";
     }
     else {
-        speech = "Sorry! something went wrong";
+        speech = "sorry! something bad happened. Try again!";
 
     }
 
@@ -156,7 +156,7 @@ module.exports.defineProducts = function (req) {
         speech = "no " + productName + " corrensponds to this brand";
     }
     else{
-        speech = "something bad happened";
+        speech = "sorry! something bad happened. Try again!";
     }
 
     return speech;

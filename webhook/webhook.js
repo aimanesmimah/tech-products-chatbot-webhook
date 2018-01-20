@@ -41,14 +41,14 @@ router.post('/',function(req,res){
             speech = webhookMethods.defineMoreAboutMethod(req);
         }
         else{
-            speech = "sorry! something bad happened";
+            speech = "sorry! something bad happened. Try again!";
         }
 
 
 
     }
     else{
-      speech = "sorry! something bad happened";
+      speech = "sorry! something bad happened. Try again!";
     }
 
     res.json({
