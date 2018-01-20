@@ -110,7 +110,7 @@ module.exports.productionConfirmationMethod = function (req) {
     let speech;
 
     if(option === "yes"){
-        let prods = helpers.getProductsOfCategoryAndBrand(state.currentCategory,state.currentProduct);
+        let prods = helpers.getProductsOfCategoryAndBrand(state.currentCategory,state.currentBrand);
         if(prods.length === 1) {
             speech = "can you repeat its name please? Just to make sure it is really there.";
         }
