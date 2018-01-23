@@ -125,31 +125,31 @@
     {
       "name" : "alexa dot",
       "brand" : "amazon",
-      "category" : "smart home",
+      "category" : "home smart",
       "subprice"  : 44.99
     },
     {
       "name" : "alexa echo",
       "brand" : "amazon",
-      "category" : "smart home",
+      "category" : "home smart",
       "subprice"  : 49.99
     },
     {
       "name" : "qbo milk master",
       "brand" : "tchibo",
-      "category" : "smart home",
+      "category" : "home smart",
       "subprice"  : 29.99
     },
     {
       "name" : "robotic vacuum cleaner powerbot vr20j9020ur/eg",
       "brand" : "samsung",
-      "category" : "smart home",
+      "category" : "home smart",
       "subprice"  : 39.99
     },
     {
       "name" : "robotic vacuum cleaner powerbot vr20j9259u/eg",
       "brand" : "samsung",
-      "category" : "smart home",
+      "category" : "home smart",
       "subprice"  : 39.99
     }
   ]
