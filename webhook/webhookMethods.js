@@ -130,7 +130,7 @@ module.exports.productionConfirmationMethod = function (req) {
 }
 
 module.exports.defineProducts = function (req) {
-    let productName = req.body.result.parameters.productName;
+    let productName = req.body.result.parameters.productName.toString().toLowerCase();
     let prods = helpers.getMatchedProducts(productName);
 
     //state.currentState = "product";
