@@ -49,7 +49,7 @@ module.exports.getProductsOfCategoryAndBrand = (category,brand) => {
 module.exports.getMatchedProducts = text => {
     let products = data.products;
 
-    const result = products.filter(prod => prod.name.includes(text.toString().toLowerCase()));
+    const result = products.filter(prod => prod.name.includes(text));
 
     return result ;
 }

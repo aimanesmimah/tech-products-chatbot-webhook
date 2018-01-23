@@ -149,7 +149,7 @@ module.exports.defineProducts = function (req) {
                 "with this deal ?";
         else{
             speech = "this corresponds to " + resultProds.length + " products. " +
-                "Which one you want. Say more about it" ;
+                "Which one you want. Say more about it ( RAM || STORAGE || version )" ;
         }
     }
     else if(!resultProds.length){
