@@ -29,7 +29,7 @@ router.post('/',function(req,res){
             speech = webhookMethods.defineCategoryMethod(req);
         }
         else if(req.body.result.parameters.defineBrand){
-            speech = webhookMethods.defineBrandMethod(req);
+            speech = webhookMethods.defineBrandMethod(req,res);
         }
         else if(req.body.result.parameters.productConfirmation){
             speech = webhookMethods.productionConfirmationMethod(req);
@@ -42,6 +42,15 @@ router.post('/',function(req,res){
         }
         else if(req.body.result.parameters.testParam){
             speech = webhookMethods.testMethod(req,res);
+        }
+        else if(req.body.result.parameters.brandFallsOutside){
+            speech = webhookMethods.brandFallsOutsideMethod(req);
+        }
+        else if(req.body.result.parameters.brandFallsOutsideConfirmation){
+            speech = webhookMethods.brandFallsOutsideConfirmationMethod(req,res);
+        }
+        else if(req.body.result.parameters.chooseCategoryBrandFallOutside){
+            speech = webhookMethods.defineCategoryBrandFallOutside(req);
         }
         else{
             speech = "sorry! something bad happened. Try again!";

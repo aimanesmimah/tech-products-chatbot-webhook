@@ -69,7 +69,7 @@ module.exports.defineCategoryMethod = function (req) {
     return speech ;
 }
 
-module.exports.defineBrandMethod = function (req) {
+module.exports.defineBrandMethod = function (req,res) {
 
     let brand = req.body.result.parameters.Brand.toString().toLowerCase();
 
@@ -78,24 +78,14 @@ module.exports.defineBrandMethod = function (req) {
     let categories = helpers.getCategoriesOfBrand(brand);
 
     if(!categories.includes(state.currentCategory)){
-        speech = brand + " brand falls outside of this category you have chosen. We have it" +
-            " only in: " ;
-
-        if(categories.length === 1){
-            speech += categories[0] + " category.";
-        }
-        else{
-            for(let i = 0 ; i< categories.length ; i++){
-                if(i === categories.length -1){
-                    speech += " and " + categories[i] + " categories." ;
-                }
-                else{
-                    speech += categories[i] ;
+        res.json({
+            followupEvent : {
+                name: "brand_falls_outside_event",
+                data: {
+                    brand : brand
                 }
             }
-        }
-
-        return speech + " Do you want to see what exist there ?";
+        });
     }
 
     //state.currentState = "brand";
@@ -228,13 +218,140 @@ module.exports.defineMoreAboutMethod = function (req) {
 
 }
 
+module.exports.brandFallsOutsideMethod = function (req) {
+    let brand = req.body.result.parameters.Brand.toString().toLowerCase();
+
+    let speech ;
+
+    state.currentBrand = brand;
+
+    let categories = helpers.getCategoriesOfBrand(brand);
+
+    speech = brand + " brand falls outside of this category you have chosen. We have it" +
+        " only in: " ;
+
+    if(categories.length === 1){
+        speech += categories[0] + " category.";
+    }
+    else{
+        for(let i = 0 ; i< categories.length ; i++){
+            if(i === categories.length -1){
+                speech += " and " + categories[i] + " categories." ;
+            }
+            else{
+                speech += categories[i] ;
+            }
+        }
+    }
+
+    return speech + " Do you want to see what exist there ?";
+
+
+}
+
+module.exports.brandFallsOutsideConfirmationMethod = function (req,res) {
+    let option = req.body.result.parameters.option ;
+    let speech;
+
+    if(option === "yes"){
+        let categories = helpers.getCategoriesOfBrand(state.currentBrand);
+
+        if(categories.length === 1){
+            state.currentCategory = categories[0];
+
+            res.json({
+                followupEvent : {
+                    name: "products_brands_falls_outside",
+                    data: {
+                        brand : state.currentBrand
+                    }
+                }
+            });
+        }
+
+        else{
+            res.json({
+                followupEvent : {
+                    name: "choose_category_brand_falls_outside_event",
+                    data: {
+                        brand : brand
+                    }
+                }
+            });
+        }
+
+    }
+    else if(option === "no"){
+
+        res.json({
+            followupEvent : {
+                name: "brand_falls_outside_confirmation_no_event",
+                data: {
+                    brand : brand
+                }
+            }
+        });
+    }
+    else{
+        speech = "sorry! something bad happened. Try again!" ;
+    }
+
+    return speech;
+}
+
+module.exports.defineCategoryBrandFallOutside = function (req) {
+    let brand = req.body.result.parameters.Brand.toLowerCase() ;
+
+    let categories = helpers.getCategoriesOfBrand(brand);
+
+    let speech;
+
+    speech = "choose one category between: " ;
+
+    for(let i=0 ; categories.length ; i++){
+        if(categories.length - 1 === i) {
+            speech += " and " + categories[i] + ".";
+        }
+        else{
+            speech += categories[i] + ", ";
+        }
+    }
+
+    return speech;
+}
+
+module.exports.getCategoryBrandFallOutside = function (req,res) {
+    let category = req.body.result.parameters.Category.toLowerCase() ;
+
+    let categories = helpers.getCategoriesOfBrand(brand);
+
+    let speech;
+
+    if(categories.includes(category)){
+            state.currentCategory = category;
+            res.json({
+                followupEvent : {
+                    name: "products_brands_falls_outside",
+                    data: {
+                          brand : state.currentBrand
+                       }
+                }
+            });
+    }
+    else{
+        speech = category + " category doesn't belong to this brand" ;
+    }
+
+    return speech;
+}
+
 module.exports.testMethod = function (req,res) {
     let speech = "ayman smimah";
       res.json({
           followupEvent : {
               name: "test_event",
               data: {
-                  test :"cloud strife"
+                  test :["cloud strife","ayman smimah"]
               }
           }
        });
