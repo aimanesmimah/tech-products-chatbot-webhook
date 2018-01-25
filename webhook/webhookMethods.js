@@ -274,7 +274,7 @@ module.exports.brandFallsOutsideConfirmationMethod = function (req,res) {
                 followupEvent : {
                     name: "choose_category_brand_falls_outside_event",
                     data: {
-                        brand : brand
+                        brand : state.currentBrand
                     }
                 }
             });
