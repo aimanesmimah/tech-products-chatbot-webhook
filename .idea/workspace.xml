@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2be90453-4e30-4893-b9a8-aba695a68df4" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/helpers.js" afterPath="$PROJECT_DIR$/data/helpers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/webhook/webhookMethods.js" afterPath="$PROJECT_DIR$/webhook/webhookMethods.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -61,8 +60,8 @@
       <file leaf-file-name="webhookMethods.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/webhook/webhookMethods.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2265">
-              <caret line="151" column="84" lean-forward="false" selection-start-line="151" selection-start-column="84" selection-end-line="151" selection-end-column="84" />
+            <state relative-caret-position="312">
+              <caret line="97" column="61" lean-forward="false" selection-start-line="97" selection-start-column="61" selection-end-line="97" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -71,7 +70,7 @@
       <file leaf-file-name="helpers.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/helpers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
+            <state relative-caret-position="565">
               <caret line="53" column="15" lean-forward="false" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
               <folding />
             </state>
@@ -136,8 +135,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="136" />
-    <option name="y" value="74" />
+    <option name="x" value="160" />
+    <option name="y" value="89" />
     <option name="width" value="1112" />
     <option name="height" value="610" />
   </component>
@@ -183,8 +182,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,23 +230,24 @@
       <workItem from="1516686150342" duration="488000" />
       <workItem from="1516720627790" duration="2104000" />
       <workItem from="1516730901991" duration="6726000" />
-      <workItem from="1516749235779" duration="17000" />
+      <workItem from="1516749235779" duration="669000" />
+      <workItem from="1516807214787" duration="5722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23810000" />
+    <option name="totallyTimeSpent" value="30184000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="136" y="74" width="1112" height="610" extended-state="0" />
+    <frame x="160" y="89" width="1112" height="610" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21135941" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1392405" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -666,7 +666,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/helpers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
+        <state relative-caret-position="565">
           <caret line="53" column="15" lean-forward="false" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
           <folding />
         </state>
@@ -674,8 +674,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/webhook/webhookMethods.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2265">
-          <caret line="151" column="84" lean-forward="false" selection-start-line="151" selection-start-column="84" selection-end-line="151" selection-end-column="84" />
+        <state relative-caret-position="312">
+          <caret line="97" column="61" lean-forward="false" selection-start-line="97" selection-start-column="61" selection-end-line="97" selection-end-column="61" />
           <folding />
         </state>
       </provider>

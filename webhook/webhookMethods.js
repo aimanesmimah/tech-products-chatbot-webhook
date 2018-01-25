@@ -73,13 +73,38 @@ module.exports.defineBrandMethod = function (req) {
 
     let brand = req.body.result.parameters.Brand.toString().toLowerCase();
 
+    let speech ;
+
+    let categories = helpers.getCategoriesOfBrand(brand);
+
+    if(!categories.includes(state.currentCategory)){
+        speech = brand + " brand falls outside of this category you have chosen. We have it" +
+            " only in: " ;
+
+        if(categories.length === 1){
+            speech += categories[0] + " category.";
+        }
+        else{
+            for(let i = 0 ; i< categories.length ; i++){
+                if(i === categories.length -1){
+                    speech += " and " + categories[i] + " categories." ;
+                }
+                else{
+                    speech += categories[i] ;
+                }
+            }
+        }
+
+        return speech + " Do you want to see what exist there ?";
+    }
+
     //state.currentState = "brand";
     state.currentBrand = brand;
 
 
     let prods = helpers.getProductsOfCategoryAndBrand(state.currentCategory,brand);
 
-    let speech ;
+
 
     if(prods.length === 1){
         speech = "we have only one product for now and that is: " + prods[0].name + "." +
