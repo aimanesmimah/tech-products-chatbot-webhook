@@ -323,7 +323,7 @@ module.exports.defineCategoryBrandFallOutside = function (req) {
 module.exports.getCategoryBrandFallOutside = function (req,res) {
     let category = req.body.result.parameters.Category.toLowerCase() ;
 
-    let categories = helpers.getCategoriesOfBrand(brand);
+    let categories = helpers.getCategoriesOfBrand(state.currentBrand);
 
     let speech;
 
