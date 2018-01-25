@@ -40,6 +40,9 @@ router.post('/',function(req,res){
         else if(req.body.result.parameters.defineMoreAbout){
             speech = webhookMethods.defineMoreAboutMethod(req);
         }
+        else if(req.body.result.parameters.testParam){
+            speech = webhookMethods.testMethod(req,res);
+        }
         else{
             speech = "sorry! something bad happened. Try again!";
         }

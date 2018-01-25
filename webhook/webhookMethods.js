@@ -228,4 +228,18 @@ module.exports.defineMoreAboutMethod = function (req) {
 
 }
 
+module.exports.testMethod = function (req,res) {
+    let speech = "ayman smimah";
+      res.json({
+          followupEvent : {
+              name: "test_event",
+              data: {
+                  test :"cloud strife"
+              }
+          }
+       });
+
+      return speech ;
+}
+
 
