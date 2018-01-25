@@ -308,7 +308,7 @@ module.exports.defineCategoryBrandFallOutside = function (req) {
 
     speech = "choose one category between: " ;
 
-    for(let i=0 ; categories.length ; i++){
+    for(let i=0 ; i < categories.length ; i++){
         if(categories.length - 1 === i) {
             speech += " and " + categories[i] + ".";
         }
