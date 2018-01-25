@@ -52,6 +52,9 @@ router.post('/',function(req,res){
         else if(req.body.result.parameters.chooseCategoryBrandFallOutside){
             speech = webhookMethods.defineCategoryBrandFallOutside(req);
         }
+        else if(req.body.result.parameters.getCategoryBrandFallsOutside){
+            speech = webhookMethods.getCategoryBrandFallOutside(req,res);
+        }
         else{
             speech = "sorry! something bad happened. Try again!";
         }
