@@ -1,12 +1,15 @@
 var express = require('express');
+var helpers = require('../data/helpers');
 var router = express.Router();
+
 
 //var helpers = require('../data/helpers');
 //var state = require('./conversationState');
 var webhookMethods = require('./webhookMethods');
 
 router.get('/test',function (req,res) {
-   res.json({success : true , method : "GET method 2" , message : "success"});
+    var prods = helpers.getMatchedProducts('galaxy');
+   res.json({success : true , method : "GET method 2" , products : prods, message : "success"});
 });
 
 router.post('/test',function (req,res) {
