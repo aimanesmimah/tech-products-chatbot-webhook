@@ -106,10 +106,14 @@ module.exports.defineBrandMethod = function (req,res) {
 
 
         for (let i = 0; i < prods.length; i++) {
-            if (i === prods.length - 1 && prods.length === 2)
-                speech += "and " + prods[i].name + ".\n";
-            if (i === prods.length - 1)
-                speech += "and Finally " + prods[i].name + ".\n";
+            if (i === prods.length - 1 ){
+                if(prods.length === 2){
+                    speech += "and " + prods[i].name + ".\n";
+                }
+                else{
+                    speech += "and Finally " + prods[i].name + ".\n";
+                }
+            }
             else
                 speech += prods[i].name + ". ";
         }
