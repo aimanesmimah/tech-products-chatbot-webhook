@@ -409,6 +409,30 @@ module.exports.nextStepConfirmationMethod = function (req,res) {
     return speech;
 }
 
+module.exports.startOverConfirmationMethod = function (req,res) {
+    let option = req.body.result.parameters.option ;
+    let speech;
+
+    if(option === "yes"){
+        res.json({
+            followupEvent : {
+                name: "present_store_event",
+                data : {}
+
+
+            }
+        });
+    }
+    else if(option === "no"){
+        speech = "Ok next time. Good bye";
+    }
+    else{
+        speech = "sorry! something bad happened. Try again!" ;
+    }
+
+    return speech;
+}
+
 module.exports.testMethod = function (req,res) {
     let speech = "ayman smimah";
       res.json({
