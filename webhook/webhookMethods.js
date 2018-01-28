@@ -241,6 +241,50 @@ module.exports.defineMoreAboutMethod = function (req,res) {
 
 }
 
+module.exports.defineMoreAbouRoboticVaccuumMethod = function (req,res) {
+
+    let info = req.body.result.parameters.roboticVacuumVersion.toString();
+
+    //state.currentState = "product";
+    state.currentMoreInfos = info ;
+
+
+
+    let prods = helpers.getMatchedProducts(info);
+
+
+
+    var resultProds = prods.filter(
+        prod => prod.category === state.currentCategory
+            && prod.brand === state.currentBrand
+            && prod.name.includes(state.currentProduct));
+
+    let speech;
+
+
+    if(resultProds.length){
+        /*speech = "this is your dream product. We got it for you. The subscription " +
+            "plan for this one is : " + resultProds[0].subprice;*/
+
+        res.json({
+            followupEvent: {
+                name: "dream_product_event",
+                data: {
+                    subprice : resultProds[0].subprice
+                }
+            }
+        });
+    }
+    else{
+        speech = "sorry! we didn't find what you're looking for. Check our products " +
+            "and choose one of them";
+    }
+
+    return speech;
+
+
+}
+
 module.exports.brandFallsOutsideMethod = function (req) {
     let brand = req.body.result.parameters.Brand.toString().toLowerCase();
 
