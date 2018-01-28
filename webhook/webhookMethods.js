@@ -148,7 +148,7 @@ module.exports.productionConfirmationMethod = function (req) {
     return speech;
 }
 
-module.exports.defineProducts = function (req) {
+module.exports.defineProducts = function (req,res) {
     let productName = req.body.result.parameters.productName.toString().toLowerCase();
     let prods = helpers.getMatchedProducts(productName);
 
@@ -162,10 +162,20 @@ module.exports.defineProducts = function (req) {
 
 
     if(resultProds.length){
-        if(resultProds.length === 1)
-            speech = "this is your dream product. The subscription plan for this " +
+        if(resultProds.length === 1) {
+            /*speech = "this is your dream product. The subscription plan for this " +
                 "product is : " + resultProds[0].subprice + "\nAre you happy " +
-                "with this deal ?";
+                "with this deal ?";*/
+
+            res.json({
+                followupEvent: {
+                    name: "dream_product_event",
+                    data: {
+                        subprice : resultProds[0].subprice
+                    }
+                }
+            });
+        }
         else{
             speech = "this corresponds to " + resultProds.length + " products. " +
                 "Which one you want. Say more about it ( RAM || STORAGE || version )" ;
@@ -181,7 +191,7 @@ module.exports.defineProducts = function (req) {
     return speech;
 }
 
-module.exports.defineMoreAboutMethod = function (req) {
+module.exports.defineMoreAboutMethod = function (req,res) {
     let specGB = req.body.result.parameters.specificationGB;
     let specRAM = req.body.result.parameters.specificationRAM ;
     let info = req.body.result.parameters.specificationNumber.toString();
@@ -209,8 +219,17 @@ module.exports.defineMoreAboutMethod = function (req) {
 
 
     if(resultProds.length){
-       speech = "this is your dream product. We got it for you. The subscription " +
-           "plan for this one is : " + resultProds[0].subprice;
+       /*speech = "this is your dream product. We got it for you. The subscription " +
+           "plan for this one is : " + resultProds[0].subprice;*/
+
+        res.json({
+            followupEvent: {
+                name: "dream_product_event",
+                data: {
+                    subprice : resultProds[0].subprice
+                }
+            }
+        });
     }
     else{
         speech = "sorry! we didn't find what you're looking for. Check our products " +
@@ -344,6 +363,46 @@ module.exports.getCategoryBrandFallOutside = function (req,res) {
     }
     else{
         speech = category + " category doesn't belong to this brand" ;
+    }
+
+    return speech;
+}
+
+module.exports.satisfactionConfirmationMethod = function (req) {
+    let option = req.body.result.parameters.option ;
+    let speech;
+
+    if(option === "yes"){
+        speech = "Nice! I'm happy for you. Do you want to pick up another thing ?";
+    }
+    else if(option === "no"){
+        speech = "Do you want to have a look at other options ?";
+    }
+    else{
+        speech = "sorry! something bad happened. Try again!" ;
+    }
+
+    return speech;
+}
+
+module.exports.nextStepConfirmationMethod = function (req,res) {
+    let option = req.body.result.parameters.option ;
+    let speech;
+
+    if(option === "yes"){
+        res.json({
+            followupEvent : {
+                name: "start_over_event",
+                data: {}
+
+            }
+        });
+    }
+    else if(option === "no"){
+        speech = "Ok next time. Good bye";
+    }
+    else{
+        speech = "sorry! something bad happened. Try again!" ;
     }
 
     return speech;
