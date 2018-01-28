@@ -393,7 +393,8 @@ module.exports.nextStepConfirmationMethod = function (req,res) {
         res.json({
             followupEvent : {
                 name: "start_over_event",
-                data: {}
+                data : {}
+
 
             }
         });

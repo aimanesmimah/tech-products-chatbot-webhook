@@ -62,7 +62,7 @@ router.post('/',function(req,res){
             speech = webhookMethods.satisfactionConfirmationMethod(req);
         }
         else if(req.body.result.parameters.nextStepConfirmation){
-            speech = webhookMethods.nextStepConfirmationMethod(req);
+            speech = webhookMethods.nextStepConfirmationMethod(req,res);
         }
         else{
             speech = "sorry! something bad happened. Try again!";
