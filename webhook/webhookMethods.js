@@ -243,7 +243,7 @@ module.exports.defineMoreAboutMethod = function (req,res) {
 
 module.exports.defineMoreAbouRoboticVaccuumMethod = function (req,res) {
 
-    let info = req.body.result.parameters.roboticVacuumVersion.toString();
+    let info = req.body.result.parameters.roboticVacuumVersion.toString().toLowerCase();
 
     //state.currentState = "product";
     state.currentMoreInfos = info ;
