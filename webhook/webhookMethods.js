@@ -174,7 +174,13 @@ module.exports.productionConfirmationMethod = function (req) {
     let speech;
 
     if(option === "yes"){
-        let prods = helpers.getProductsOfCategoryAndBrand(state.currentCategory,state.currentBrand);
+        let prods ;
+        if(state.currentCategory !== "all")
+            prods = helpers.getProductsOfCategoryAndBrand(state.currentCategory,state.currentBrand);
+        else
+            prods = helpers.getAllProductsOfBrand(state.currentBrand);
+
+
         if(prods.length === 1) {
             speech = "can you repeat its name please? Just to make sure it is really there.";
         }
