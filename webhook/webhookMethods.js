@@ -124,6 +124,51 @@ module.exports.defineBrandMethod = function (req,res) {
     return speech ;
 }
 
+module.exports.defineAllBrandMethod = function (req) {
+
+    let brand = req.body.result.parameters.Brand.toString().toLowerCase();
+
+    let speech ;
+
+    state.currentCategory = "all";
+    state.currentBrand = brand;
+
+
+    let prods = helpers.getAllProductsOfBrand(brand);
+
+    if(prods.length){
+        if(prods.length === 1){
+            speech = "we have only one product for now and that is: " + prods[0].name + "." +
+                " Do you want to pick it up?";
+        }
+        else{
+            speech = "this is all products we have for " + brand + " brand.";
+            speech += " we have : \n";
+
+
+            for (let i = 0; i < prods.length; i++) {
+                if (i === prods.length - 1 ){
+                    if(prods.length === 2){
+                        speech += "and " + prods[i].name + ".\n";
+                    }
+                    else{
+                        speech += "and Finally " + prods[i].name + ".\n";
+                    }
+                }
+                else
+                    speech += prods[i].name + ". ";
+            }
+
+            speech += " Did you like one of them ?";
+        }
+    }
+    else{
+        speech = "no product was found try again";
+    }
+
+    return speech;
+}
+
 module.exports.productionConfirmationMethod = function (req) {
     let option = req.body.result.parameters.option ;
     let speech;

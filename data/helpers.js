@@ -54,3 +54,11 @@ module.exports.getMatchedProducts = text => {
     return result ;
 }
 
+module.exports.getAllProductsOfBrand = brand => {
+    let products = data.products;
+
+    const result = products.filter(prod => prod.brand === brand)
+
+    return result;
+}
+

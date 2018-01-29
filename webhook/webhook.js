@@ -34,6 +34,9 @@ router.post('/',function(req,res){
         else if(req.body.result.parameters.defineBrand){
             speech = webhookMethods.defineBrandMethod(req,res);
         }
+        else if(req.body.result.parameters.defineAllbrand){
+            speech = webhookMethods.defineAllBrandMethod(req,res);
+        }
         else if(req.body.result.parameters.productConfirmation){
             speech = webhookMethods.productionConfirmationMethod(req);
         }
