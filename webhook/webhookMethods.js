@@ -200,8 +200,15 @@ module.exports.defineProducts = function (req,res) {
     //state.currentState = "product";
     state.currentProduct = productName;
 
-    var resultProds = prods.filter(
-        prod => prod.category === state.currentCategory && prod.brand === state.currentBrand );
+    let resultProds ;
+
+    if(state.currentCategory !== "all"){
+        resultProds = prods.filter(
+            prod => prod.category === state.currentCategory && prod.brand === state.currentBrand );
+    }
+    else{
+        resultProds = prods.filter( prod => prod.brand === state.currentBrand );
+    }
 
     let speech ;
 
@@ -254,11 +261,21 @@ module.exports.defineMoreAboutMethod = function (req,res) {
     let prods = helpers.getMatchedProducts(info);
 
 
+    let resultProds ;
 
-    var resultProds = prods.filter(
-        prod => prod.category === state.currentCategory
-            && prod.brand === state.currentBrand
-            && prod.name.includes(state.currentProduct));
+    if(state.currentCategory !== "all"){
+        resultProds = prods.filter(
+            prod => prod.category === state.currentCategory
+                && prod.brand === state.currentBrand
+                && prod.name.includes(state.currentProduct));
+    }
+    else{
+        resultProds = prods.filter(
+            prod => prod.brand === state.currentBrand
+                 && prod.name.includes(state.currentProduct));
+    }
+
+
 
     let speech;
 
@@ -297,12 +314,19 @@ module.exports.defineMoreAbouRoboticVaccuumMethod = function (req,res) {
 
     let prods = helpers.getMatchedProducts(info);
 
+    let resultProds ;
 
-
-    var resultProds = prods.filter(
-        prod => prod.category === state.currentCategory
-            && prod.brand === state.currentBrand
-            && prod.name.includes(state.currentProduct));
+    if(state.currentCategory !== "all"){
+        resultProds = prods.filter(
+            prod => prod.category === state.currentCategory
+                && prod.brand === state.currentBrand
+                && prod.name.includes(state.currentProduct));
+    }
+    else{
+        resultProds = prods.filter(
+            prod => prod.brand === state.currentBrand
+                && prod.name.includes(state.currentProduct));
+    }
 
     let speech;
 
