@@ -256,6 +256,8 @@ module.exports.defineMoreAboutMethod = function (req,res) {
     let info = req.body.result.parameters.specificationNumber.toString();
 
     let specIphone = req.body.result.parameters.iphoneSpecification.toString();
+    let specSamsungPhone = req.body.result.parameters.SamsungPhoneSpecification.toString();
+    let specWatch = req.body.result.parameters.watchSpecification.toString();
 
     //state.currentState = "product";
 
@@ -264,6 +266,14 @@ module.exports.defineMoreAboutMethod = function (req,res) {
     if(specIphone){
         state.currentMoreInfos = specIphone;
         prods = helpers.getMatchedProducts(specIphone);
+    }
+    else if(specSamsungPhone){
+        state.currentMoreInfos = specSamsungPhone;
+        prods = helpers.getMatchedProducts(specSamsungPhone);
+    }
+    else if(specWatch){
+        state.currentMoreInfos = specWatch;
+        prods = helpers.getMatchedProducts(specWatch);
     }
     else{
         state.currentMoreInfos = info ;
