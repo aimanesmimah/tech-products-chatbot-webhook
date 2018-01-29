@@ -357,13 +357,15 @@ module.exports.defineMoreAboutBebopMethod = function (req,res) {
         prods = [{
             "name" : "drone bebop",
             "brand" : "parrot",
-            "category" : "drones"
+            "category" : "drones",
+            "subprice"  : 49.99
         }];
     else
         prods = [{
             "name" : "drone bebop 2",
             "brand" : "parrot",
-            "category" : "drones"
+            "category" : "drones",
+            "subprice"  : 59.99
         }];
 
     let resultProds ;
