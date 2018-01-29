@@ -354,9 +354,17 @@ module.exports.defineMoreAboutBebopMethod = function (req,res) {
     let prods ;
 
     if(info === "version 1")
-        prods = ['drone bebop'];
+        prods = [{
+            "name" : "drone bebop",
+            "brand" : "parrot",
+            "category" : "drones"
+        }];
     else
-        prods = ['drone bebop 2'];
+        prods = [{
+            "name" : "drone bebop 2",
+            "brand" : "parrot",
+            "category" : "drones"
+        }];
 
     let resultProds ;
 
