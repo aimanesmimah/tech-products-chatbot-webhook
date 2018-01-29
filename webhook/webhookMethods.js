@@ -182,7 +182,8 @@ module.exports.productionConfirmationMethod = function (req) {
 
 
         if(prods.length === 1) {
-            speech = "can you repeat its name please? Just to make sure it is really there.";
+            speech = "can you repeat its name or a part of it please? Just to make " +
+                "sure it is really there.";
         }
         else{
             speech = "So which one do you want to subscribe to ?";
@@ -244,7 +245,8 @@ module.exports.defineProducts = function (req,res) {
         speech = "no " + productName + " corrensponds to this brand";
     }
     else{
-        speech = "sorry! something bad happened. Try again!";
+        speech = "sorry! we didn't find what you're looking for! It seems that you typed a " +
+            "wrong name. Try again please";
     }
 
     return speech;
