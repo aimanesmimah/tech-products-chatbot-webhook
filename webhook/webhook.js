@@ -46,6 +46,9 @@ router.post('/',function(req,res){
         else if(req.body.result.parameters.defineMoreAbout) {
             speech = webhookMethods.defineMoreAboutMethod(req, res);
         }
+        else if(req.body.result.parameters.defineMoreAboutBebop){
+            speech = webhookMethods.defineMoreAboutBebopMethod(req,res);
+        }
         else if(req.body.result.parameters.defineMoreAboutRoboticVacuum){
             speech = webhookMethods.defineMoreAbouRoboticVaccuumMethod(req,res);
         }

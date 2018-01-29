@@ -345,6 +345,58 @@ module.exports.defineMoreAboutMethod = function (req,res) {
 
 }
 
+module.exports.defineMoreAboutBebopMethod = function (req,res) {
+    let info = req.body.result.parameters.moreAboutBebop.toString().toLowerCase();
+
+    //state.currentState = "product";
+    state.currentMoreInfos = info ;
+
+    let prods ;
+
+    if(info === "version 1")
+        prods = ['drone bebop'];
+    else
+        prods = ['drone bebop 2'];
+
+    let resultProds ;
+
+    if(state.currentCategory !== "all"){
+        resultProds = prods.filter(
+            prod => prod.category === state.currentCategory
+                && prod.brand === state.currentBrand
+                && prod.name.includes(state.currentProduct));
+    }
+    else{
+        resultProds = prods.filter(
+            prod => prod.brand === state.currentBrand
+                && prod.name.includes(state.currentProduct));
+    }
+
+    let speech;
+
+
+    if(resultProds.length){
+        /*speech = "this is your dream product. We got it for you. The subscription " +
+            "plan for this one is : " + resultProds[0].subprice;*/
+
+        res.json({
+            followupEvent: {
+                name: "dream_product_event",
+                data: {
+                    subprice : resultProds[0].subprice,
+                    product : resultProds[0].name
+                }
+            }
+        });
+    }
+    else{
+        speech = "sorry! we didn't find what you're looking for. Check our products " +
+            "and choose one of them. Good Bye";
+    }
+
+    return speech;
+}
+
 module.exports.defineMoreAbouRoboticVaccuumMethod = function (req,res) {
 
     let info = req.body.result.parameters.roboticVacuumVersion.toString().toLowerCase();
@@ -389,7 +441,7 @@ module.exports.defineMoreAbouRoboticVaccuumMethod = function (req,res) {
     }
     else{
         speech = "sorry! we didn't find what you're looking for. Check our products " +
-            "and choose one of them";
+            "and choose one of them. Good bye";
     }
 
     return speech;
