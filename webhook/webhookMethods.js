@@ -255,17 +255,29 @@ module.exports.defineMoreAboutMethod = function (req,res) {
     let specRAM = req.body.result.parameters.specificationRAM ;
     let info = req.body.result.parameters.specificationNumber.toString();
 
+    let specIphone = req.body.result.parameters.iphoneSpecification.toString();
+
     //state.currentState = "product";
-    state.currentMoreInfos = info ;
 
-    if(specGB && !specRAM)
-        info += "gb";
-    if(specRAM || ( specGB && specRAM ))
-        info += "gb ram";
-    else
-        info += "";
+    let prods ;
 
-    let prods = helpers.getMatchedProducts(info);
+    if(specIphone){
+        state.currentMoreInfos = specIphone;
+        prods = helpers.getMatchedProducts(specIphone);
+    }
+    else{
+        state.currentMoreInfos = info ;
+
+        if(specGB && !specRAM)
+            info += "gb";
+        if(specRAM || ( specGB && specRAM ))
+            info += "gb ram";
+        else
+            info += "";
+
+        prods = helpers.getMatchedProducts(info);
+    }
+
 
 
     let resultProds ;
