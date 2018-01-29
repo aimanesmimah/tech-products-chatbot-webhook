@@ -229,7 +229,8 @@ module.exports.defineProducts = function (req,res) {
                 followupEvent: {
                     name: "dream_product_event",
                     data: {
-                        subprice : resultProds[0].subprice
+                        subprice : resultProds[0].subprice,
+                        product : resultProds[0].name
                     }
                 }
             });
@@ -294,7 +295,8 @@ module.exports.defineMoreAboutMethod = function (req,res) {
             followupEvent: {
                 name: "dream_product_event",
                 data: {
-                    subprice : resultProds[0].subprice
+                    subprice : resultProds[0].subprice,
+                    product : resultProds[0].name
                 }
             }
         });
@@ -345,7 +347,8 @@ module.exports.defineMoreAbouRoboticVaccuumMethod = function (req,res) {
             followupEvent: {
                 name: "dream_product_event",
                 data: {
-                    subprice : resultProds[0].subprice
+                    subprice : resultProds[0].subprice,
+                    product : resultProds[0].name
                 }
             }
         });
