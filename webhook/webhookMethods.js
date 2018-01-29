@@ -201,8 +201,18 @@ module.exports.productionConfirmationMethod = function (req) {
 }
 
 module.exports.defineProducts = function (req,res) {
+    let convertible = req.body.result.parameters.convertible;
+
     let productName = req.body.result.parameters.productName.toString().toLowerCase();
-    let prods = helpers.getMatchedProducts(productName);
+
+    let prods ;
+
+    if(convertible) {
+        productName = 'convertible laptop';
+        prods = helpers.getMatchedProducts(productName);
+    }
+    else
+        prods = helpers.getMatchedProducts(productName);
 
     //state.currentState = "product";
     state.currentProduct = productName;
